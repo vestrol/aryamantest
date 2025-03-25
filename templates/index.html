@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arya AI - Elevate Your Math Experience</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar navbar-expand-lg navbar-light feynman-navbar fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand d-flex align-items-center" href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='logo_3.png') }}" 
+                     alt="Arya AI Logo"
+                     class="brand-logo"
+                     style="height: 40px; width: auto; margin-right: 12px;">
+            </a>
+    
+            <button class="navbar-toggler" type="button" 
+                    data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+                    aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('home') }}">
+                            <span class="nav-underline"></span>
+                            <i class="fas fa-home quantum-icon"></i>
+                            Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about') }}">
+                            <span class="nav-underline"></span>
+                            <i class="fas fa-book-open quantum-icon"></i> 
+                            About
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('ai') }}">
+                            <span class="nav-underline"></span>
+                            <i class="fas fa-brain quantum-icon"></i>
+                            AI Lab
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="feynman-intro container">
+        <!-- Main Hook Section -->
+        <div class="text-center">
+            <h1 class="headline" style="margin-bottom: 1.5rem;">
+                Can you explain <span id="topic1" class="highlight typed-text"></span>  to a fish &#128031;?                
+            </h1>
+            
+            <div class="quote-mark" style="position: relative; margin: 2rem 0;">
+                <h2 style="display: inline-block; padding: 1rem 2rem; border-radius: 8px;">
+                    Neither could we...<br>
+                    <span style="color: #E01A4F; display: block; margin-top: 0.5rem;">
+                        until a bongo-playing physicist showed us how &#128519;
+                    </span>
+                </h2>
+            </div>
+    
+            <!-- Scroll Button -->
+            <a href="#timeline-1" class="feynman-btn" 
+            
+            onmouseover="this.style.transform='scale(1)'"
+            onmouseout="this.style.transform='scale(0.98)'"
+            onclick="document.getElementById('timeline-1').scrollIntoView({behavior: 'smooth'})">
+            <i class="fa-solid fa-user-tie" style="font-size: 11.5px; padding-right: 0.2rem;"></i> About Prof Feynman
+            </a>
+            <a href="{{ url_for('ai') }}" class="feynman-btn"
+            onmouseover="this.style.transform='scale(1)'"
+            onmouseout="this.style.transform='scale(0.98)'">
+            <i class="fa-solid fa-arrow-right" style="font-size: 11.5px; padding-right: 0.2rem;"></i>
+            Meet Prof. Feynman
+            </a>
+
+            <style>
+                /* Add bounce animation to arrow */
+                .fa-arrow-down {
+                    animation: bounce 2s infinite;
+                }
+                
+                @keyframes bounce {
+                    0%, 100% { transform: translateY(0); }
+                    50% { transform: translateY(-3px); }
+                }
+            </style>
+    
+            <!-- Footnote -->
+            <small class="footnote" style="display: block; margin-top: 2rem;">
+                Warning: May cause sudden understanding of quantum physics<br> 
+                during breakfast cereal consumption
+            </small>
+        </div>
+    </div>
+
+    
+
+    <div class="timeline-container" id="timeline-1">
+        <div class="timeline-header">
+            <h2 class="timeline-header__title">Richard Phillips Feynman</h2>
+            <h3 class="timeline-header__subtitle">THE GREAT EXPLAINER</h3>
+        </div>
+    <div class="timeline">
+        <div class="timeline-item" data-text="Spinkius Spinkius” and the Art of Questioning Rituals">
+            <div class="timeline__content"><img class="timeline__img" src="https://images.squarespace-cdn.com/content/v1/5478e059e4b04a873e34cd68/1549905083401-RJ0GA0LL0223F9X15WKQ/feynman+as+a+mentor.png?format=1500w"/>
+                <h2 class="timeline__content-title">1918</h2>
+                <p class="timeline__content-desc">Richard Phillips Feynman burst into the world in Far Rockaway, Queens, like a proton escaping a cyclotron. His father, a uniform salesman with a penchant for teaching his son to “question the ritual,” filled young Dick’s head with patterns: “See that bird? It’s a Spinkius spinkius in every language, but the names don’t matter—what’s it doing?” By 10, Feynman had a “lab” in his closet, rewiring busted radios for neighbors. When one repair ended with the house nearly burning down, he shrugged: “I guessed the wiring.” A harbinger of things to come.</p>
+            </div>
+        </div>
+        <div class="timeline-item" data-text="Safecracking, Accents, and the Atomic Ballet">
+            <div class="timeline__content"><img class="timeline__img" src="https://i.pinimg.com/736x/49/c3/f0/49c3f01156e8d0e0916b1955b6c6ea4c.jpg"/>
+                <h2 class="timeline__content-title">1943</h2>
+                <p class="timeline__content-desc">So there I was at Los Alamos, babysitting bomb math and cracking safes for kicks. Security? Pfft. I figured out guys used their wife’s birthdays as combos. One colonel’s safe had “25-25-25”—three times his anniversary! I left a note: “GUESS WHO.” Bet they blamed the commies. Oh, and I taught myself to pick locks and mimic a Los Alamos accent. Once convinced a guard I was a “foreigner” from New Mexico. “¡Vámonos, amigo!” Physics? Easy. People? Hilarious</p>
+            </div>
+        </div>
+        <div class="timeline-item" data-text="Nobel Schmovel: How to Win Physics and Annoy Stockholm">
+            <div class="timeline__content"><img class="timeline__img" src="https://i.pinimg.com/736x/5b/cf/5a/5bcf5a9b6263341a128959c4f8cd5ec8.jpg"/>
+                <h2 class="timeline__content-title">1965</h2>
+                <p class="timeline__content-desc">The Nobel Committee called. “You’ve won for QED!” I groaned. “Do I have to accept?” They insisted. So I showed up in a borrowed tux, gave a speech about how awards are “a pain in the neck,” then partied with Swedish students who taught me a chant: “Yum-yum-yum, Feynman’s a bum!” Later, a reporter asked, “What’s your secret?” I said, “I ignore experts. And carry a notebook to doodle anything—even failed ideas.” Then I flew to Rio to teach physics in Portuguese. Why? Porque não?</p>
+            </div>
+        </div>
+        <div class="timeline-item" data-text="The Ice Water Incident: O-Rings, Bureaucrats, and the Fine Art of Not B.S.-ing">
+            <div class="timeline__content"><img class="timeline__img" src="https://i.pinimg.com/736x/1f/6a/f1/1f6af12c17714c954a1348ffd5b224a3.jpg"/>
+                <h2 class="timeline__content-title">1986</h2>
+                <p class="timeline__content-desc">The Challenger exploded. NASA swore it wasn’t the O-rings. Feynman, sipping ice water in a Senate hearing, raised an eyebrow. “Let’s do an experiment.” He scribbled in his report: “For a successful technology, reality must take precedence over public relations.” NASA squirmed. Feynman grinned. The press dubbed him “The Great Explainer.” He preferred “That guy who out-stubborned a bureaucracy</p>
+            </div>
+        </div>
+        <div class="timeline-item" data-text="“I’d Hate to Die Twice” (Spoiler: He’s Still Winning)">
+            <div class="timeline__content"><img class="timeline__img" src="https://i.pinimg.com/736x/56/71/a8/5671a80c8f05e012f0ad05cf9259ba01.jpg"/>
+                <h2 class="timeline__content-title">1988</h2>
+                <p class="timeline__content-desc">So the cancer got me. Big deal. I told the docs, “Dying’s boring. Let’s talk quantum spin!” My last words? “I’d hate to die twice. It’s so boring.” They put “He loved science” on my tombstone. Meh. Should’ve been: “Here lies Feynman. Finally stopped asking questions.” (Spoiler: He didn’t.)</p>
+            </div>
+        </div>
+    </div>
+    </div>        
+    <!-- Footer -->
+    <footer class="py-4 text-center">
+        <div class="container">
+            <p>&copy; 2025 Arya AI. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+        (function($) {
+        $.fn.timeline = function() {
+            var selectors = {
+            id: $(this),
+            item: $(this).find(".timeline-item"),
+            activeClass: "timeline-item--active",
+            img: ".timeline__img"
+            };
+            selectors.item.eq(0).addClass(selectors.activeClass);
+            selectors.id.css(
+            "background-image",
+            "url(" +
+                selectors.item
+                .first()
+                .find(selectors.img)
+                .attr("src") +
+                ")"
+            );
+            var itemLength = selectors.item.length;
+            $(window).scroll(function() {
+            var max, min;
+            var pos = $(this).scrollTop();
+            selectors.item.each(function(i) {
+                min = $(this).offset().top;
+                max = $(this).height() + $(this).offset().top;
+                var that = $(this);
+                if (i == itemLength - 2 && pos > min + $(this).height() / 2) {
+                selectors.item.removeClass(selectors.activeClass);
+                selectors.id.css(
+                    "background-image",
+                    "url(" +
+                    selectors.item
+                        .last()
+                        .find(selectors.img)
+                        .attr("src") +
+                    ")"
+                );
+                selectors.item.last().addClass(selectors.activeClass);
+                } else if (pos <= max - 40 && pos >= min) {
+                selectors.id.css(
+                    "background-image",
+                    "url(" +
+                    $(this)
+                        .find(selectors.img)
+                        .attr("src") +
+                    ")"
+                );
+                selectors.item.removeClass(selectors.activeClass);
+                $(this).addClass(selectors.activeClass);
+                }
+            });
+            });
+        };
+        })(jQuery);
+
+        $("#timeline-1").timeline();
+
+    </script>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
